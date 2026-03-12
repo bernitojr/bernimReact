@@ -1,13 +1,17 @@
-import './App.css'
-import Game from "./components/Game"
+import { useState } from "react";
+import Home from "./components/Home";
+import Game from "./components/Game";
 
+export default function App() {
+  const [nbPiles, setNbPiles] = useState(null);
 
-function App() {
   return (
     <div className="app">
-      <Game />
+      {nbPiles === null ? (
+        <Home onStart={setNbPiles} />
+      ) : (
+        <Game nbPiles={nbPiles} />
+      )}
     </div>
   );
 }
-
-export default App;

@@ -3,7 +3,7 @@ import { coupIA } from "./IA"
 import Endgame from "./Endgame"
 import Line from "./Line"
 
-export default function Game() {
+export default function Game( {nbPiles}) {
 
     const [pyramide, setPyramide] = useState([])
     const [tour, setTour] = useState("joueur1")
@@ -11,7 +11,7 @@ export default function Game() {
 
     // générer la pyramide
     useEffect(() =>{
-        const lignes = 5
+        const lignes = nbPiles
         const p = Array.from({length: lignes}, () => Math.floor(Math.random() * 7) +1)
         setPyramide(p)
 
