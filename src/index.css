@@ -194,9 +194,23 @@ width: clamp(60px, 6vw, 80px); */
 /* faire en sorte que les msg disparraissent  */
 .message {
   opacity: 1;
-  transition: opacity .3s ease-out;
+  transform: translateY(0);
+  transition: opacity .3s ease-out, transform .3s ease-out;
 }
 
-.message.removed {
+.message.fade-in {
   opacity: 0;
+  transform: translateY(10px);
+  animation: fadeIn .3s forwards ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
