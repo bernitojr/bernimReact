@@ -115,8 +115,8 @@ body{
 }
 
 .baton {
-  height: 10vh;
-  width: clamp(60px, 6vw, 80px);
+  height: 5vh;
+  width: clamp(30px, 3vw, 40px);
   background-color: var(--action);
   border-radius: var(--borderRadius);
 }
@@ -133,4 +133,70 @@ body{
   padding: .7rem 1.5rem;
   font-size: 1.2rem;
   cursor: pointer;
+}
+
+
+.preview-row,
+.baton{
+  /* height: 10vh;
+width: clamp(60px, 6vw, 80px); */
+  background-color: var(--action);
+  border-radius: var(--borderRadius);
+}
+
+.baton {
+  display: inline-block;
+  gap: 50px;
+}
+
+.baton.preview {
+  opacity: 0.5;
+  transform: scale(0.9);
+}
+
+.baton.disappear {
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+    /* height: 70vh; */
+}
+
+
+.pyramide {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    gap: 8px;
+    height: 100%;
+}
+
+.ligne {
+    display: flex;
+    justify-content: flex-start; /* centre les bâtons dans chaque ligne */
+    gap: 8px;
+}
+
+
+.ordi{
+  color: var(--action);
+}
+
+
+/* faire en sorte que les msg disparraissent  */
+.message {
+  opacity: 1;
+  transition: opacity .3s ease-out;
+}
+
+.message.removed {
+  opacity: 0;
 }

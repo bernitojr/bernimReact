@@ -15,7 +15,7 @@ export default function Home({ onStart }) {
           type="range"
           min="3"
           max="5"
-          class="slider"
+          className="slider"
           value={nbLignes}
           onChange={(e) => setNbLignes(Number(e.target.value))}
         />
