@@ -24,7 +24,7 @@ export default function Home({ onStart }) {
       {/* Animation dynamique */}
       <div className="preview">
         {Array.from({ length: nbLignes }).map((_, i) => (
-          <div key={i} className="baton">|</div>
+          <div key={i} className="baton"></div>
         ))}
       </div>
 

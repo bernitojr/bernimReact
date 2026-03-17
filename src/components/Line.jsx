@@ -4,7 +4,7 @@ export default function Line({ index, nb, jouerCoup }) {
       <p>Ligne {index + 1}</p>
       <div>
         {Array.from({ length: nb }).map((_, i) => (
-          <span key={i} className="baton">|</span>
+          <span key={i} className="baton"></span>
         ))}
       </div>
 

@@ -20,11 +20,19 @@ export default function Game({ nbPiles }) {
     setTour(Math.random() < 0.5 ? "joueur1" : "ordi");
   }, []);
 
+
 function addMessage(text, className) {
   setMessages(prev => {
-    const updated = [...prev, { text, class: className, fade: false }];
+    let updated = [
+      ...prev,
+      {
+        id: Date.now() + Math.random(), // id unique
+        text,
+        class: className,
+        appear: true
+      }
+    ];
 
-    // Limite à 4 messages
     if (updated.length > 4) {
       updated.shift(); // supprime le plus ancien
     }
