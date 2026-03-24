@@ -20,7 +20,8 @@ export default function Game({ nbPiles }) {
     const p = Array.from({ length: lignes }, () => Math.floor(Math.random() * 7) + 1);
     setPyramide(p);
 
-    setTour(Math.random() < 0.5 ? "joueur1" : "ordi");
+    // setTour(Math.random() < 0.5 ? "joueur1" : "ordi");
+    setTour("joueur1");
   }, []);
 
   function addMessage(joueur, choix, ligne) {

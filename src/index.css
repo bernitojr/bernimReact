@@ -75,7 +75,10 @@ body{
 .formContainer,
 .pyramide,
 .ligne,
-.message {
+.message,
+.title,
+.slider,
+body{
   transition: background-color .4s ease, color .4s ease, border-color .4s ease;
 }
 
@@ -134,8 +137,8 @@ body{
   padding: 0.8rem 1.5rem;
   border-radius: var(--borderRadius);
   border: var(--action) 1px solid;
-  background-color: transparent;
-  color: var(--action);
+  background-color: var(--bg-light);
+  color: var(--text);
   font-size: 1rem;
   cursor: pointer;
   transition: background-color .3s ease, color .3s ease;
@@ -218,14 +221,14 @@ width: clamp(60px, 6vw, 80px); */
     display: flex;
     flex-direction: column;
     /* align-items: center; */
-    gap: 8px;
+    gap: .5rem;
     height: 100%;
 }
 
 .ligne {
     display: flex;
     justify-content: flex-start; /* centre les bâtons dans chaque ligne */
-    gap: 8px;
+    gap: .5rem;
 }
 
 
@@ -293,3 +296,10 @@ width: clamp(60px, 6vw, 80px); */
   color: var(--text-primary);
 }
 
+.endgame-container {
+  height: 100vh; /* prend toute la hauteur de l'écran */
+  display: flex;
+  justify-content: center; /* centre horizontalement */
+  align-items: center; /* centre verticalement */
+  text-align: center; /* centre le texte dans le h1 */
+}
