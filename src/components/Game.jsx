@@ -45,6 +45,13 @@ function addMessage(text, className) {
 }
 
 
+useEffect(() => {
+  if (winner !== null) {
+    setMessages([]); // supprime tous les messages
+  }
+}, [winner]);
+
+
 
   function jouerCoup(ligne, choix, joueur) {
     const newP = [...pyramide];
@@ -82,12 +89,13 @@ function addMessage(text, className) {
       });
     }
   }, [winner])
+return (
+  <div className="home">
+    <div className="formContainer">
 
-  return (
-    <div className="home">
-        <div className="formContainer">
-      <Messages messages={messages} setMessages={setMessages} />
-
+      {winner === null && (
+        <Messages messages={messages} setMessages={setMessages} />
+      )}
 
       {!winner && (
         <p className={`tour-actuel ${tour}`}>
@@ -99,18 +107,18 @@ function addMessage(text, className) {
         <Endgame winner={winner} />
       ) : (
         <Pyramide 
-        pyramide={pyramide}
-        jouerCoup={jouerCoup}
-        hovered = {hovered}
-        setHovered = {setHovered}
-        disappear = {disappear}
-        setDisappear = {setDisappear} />
+          pyramide={pyramide}
+          jouerCoup={jouerCoup}
+          hovered={hovered}
+          setHovered={setHovered}
+          disappear={disappear}
+          setDisappear={setDisappear}
+        />
       )}
 
-      <button className="btn" onClick={() => window.location.reload()}>
-        Quitter la partie
-      </button>
+
     </div>
-    </div>
-  );
+  </div>
+);
+
 }

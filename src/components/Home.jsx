@@ -29,14 +29,7 @@ export default function Home({ onStart }) {
       </div>
 
    </div>
-      {/* Boutons */}
-      <button className="btn" onClick={() => onStart(nbLignes)}>
-        Jouer
-      </button>
 
-      <button className="btn-secondary">
-        Règles
-      </button>
     </div>
   );
 }
