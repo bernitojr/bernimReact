@@ -303,3 +303,62 @@ width: clamp(60px, 6vw, 80px); */
   align-items: center; /* centre verticalement */
   text-align: center; /* centre le texte dans le h1 */
 }
+
+
+
+.modeContainer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modeButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modeBtn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  transition: 0.2s;
+}
+
+.modeBtn.selected {
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+}
+
+
+.modeContainer,
+.difficultyContainer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.modeButtons,
+.difficultyButtons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.modeBtn {
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: #ddd;
+  transition: 0.2s;
+}
+
+.modeBtn.selected {
+  background: #4a90e2;
+  color: white;
+  font-weight: bold;
+}

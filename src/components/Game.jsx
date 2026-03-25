@@ -5,7 +5,7 @@ import Messages from "./Messages";
 import Pyramide from "./Pyramide";
 import confetti from "canvas-confetti";
 
-export default function Game({ nbPiles }) {
+export default function Game({ nbPiles, difficulte }) {
   const [pyramide, setPyramide] = useState([]);
   const [tour, setTour] = useState("joueur1");
   const [winner, setWinner] = useState(null);
@@ -81,7 +81,7 @@ useEffect(() => {
   useEffect(() => {
     if (tour === "ordi" && winner === null) {
       setTimeout(() => {
-        const [ligne, choix] = coupIA(pyramide);
+        const [ligne, choix] = coupIA(pyramide, difficulte);
         jouerCoup(ligne, choix, "ordi");
       }, 800);
     }
