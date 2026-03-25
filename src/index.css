@@ -99,9 +99,8 @@ body{
   text-align: center;
 }
 
- /* btn fixé en bas de l'écran */
 .action-bar {
-  margin-top: 2rem;
+  margin-top: 1rem;
   display: flex;
   justify-content: center;
 }
