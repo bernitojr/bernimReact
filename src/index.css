@@ -97,10 +97,11 @@ body{
 
 .home {
   text-align: center;
+  padding-bottom: 120px;
 }
 
 .action-bar {
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
   display: flex;
   justify-content: center;
 }
