@@ -272,7 +272,7 @@ width: clamp(60px, 6vw, 80px); */
 }
 
 .endgame-container {
-  height: 30vh; /* prend toute la hauteur de l'écran */
+  height: 20vh; /* prend toute la hauteur de l'écran */
   display: flex;
   justify-content: center; /* centre horizontalement */
   align-items: center; /* centre verticalement */
