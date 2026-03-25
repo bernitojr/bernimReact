@@ -115,6 +115,12 @@ export default function Home({
           ))}
         </div>
 
+<div className="action-bar">
+  <button className="btn" onClick={onStart}>
+    Jouer
+  </button>
+</div>
+
       </div>
     </div>
   );

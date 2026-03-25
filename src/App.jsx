@@ -30,12 +30,7 @@ export default function App() {
          setJoueur2={setJoueur2}
          onStart={() => setNbPiles(pendingLignes)}
          />
-
-          <ActionBar>
-            <button className="btn" onClick={() => setNbPiles(pendingLignes)}>
-              Jouer
-            </button>
-          </ActionBar>
+         
         </>
       ) : (
         <>

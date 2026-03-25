@@ -5,8 +5,8 @@ export default function Endgame({ winner, modeJeu, joueur1, joueur2 }) {
   if (modeJeu === "ia") {
     // Mode IA
     message = winner === "joueur1"
-      ? "Tu as gagné !"
-      : "J'ai gagné !";
+      ? "Tu as gagné ! :)"
+      : "Tu as perdu ! :(";
   } else {
     // Mode PvP
     message = winner === "joueur1"
