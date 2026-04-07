@@ -24,20 +24,24 @@ export default function Game({ nbPiles, difficulte, modeJeu, joueur1, joueur2 })
     setTour("joueur1");
   }, []);
 
+
+
 function addMessage(joueur, choix, ligne) {
   let acteur;
+  let verbe;
 
   if (modeJeu === "ia") {
     acteur = joueur === "joueur1" ? "Tu" : "Je";
+    verbe = joueur === "joueur1" ? "retires" : "retire";
   } else {
     acteur = joueur === "joueur1" ? joueur1 : joueur2;
+    verbe = "retire"; // en PvP, pas de "tu", donc pas de "retires"
   }
 
   const pluriel = choix > 1 ? "s" : "";
   const ligneAffichee = ligne + 1;
 
-  const text = `${acteur} retire ${choix} bâton${pluriel} de la ligne ${ligneAffichee}`;
-
+  const text = `${acteur} ${verbe} ${choix} bloc${pluriel} de la ligne ${ligneAffichee}`;
 
   setMessages(prev => {
     let updated = [
