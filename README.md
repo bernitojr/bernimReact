@@ -4,7 +4,7 @@ Bienvenue dans **BernimReact**, une petite application React développée avec V
 Elle inclut un thème clair/sombre, des animations de confettis, une interface responsive et une structure de composants propre et moderne.
 
 jouable à cette adresse : 
-[https://virgilebernard.github.io/bernimReact/](https://bernitojr.github.io/bernimReact/)
+[https://bernitojr.github.io/bernimReact/](https://bernitojr.github.io/bernimReact/)
 ---
 
 ## ✨ Fonctionnalités
