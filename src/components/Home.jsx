@@ -24,14 +24,14 @@ export default function Home({
               className={`modeBtn ${modeJeu === "ia" ? "selected" : ""}`}
               onClick={() => setModeJeu("ia")}
             >
-              🤖 IA
+              vs Bot
             </button>
 
             <button
               className={`modeBtn ${modeJeu === "pvp" ? "selected" : ""}`}
               onClick={() => setModeJeu("pvp")}
             >
-              👤 Humain
+              vs Joueur
             </button>
           </div>
         </div>
