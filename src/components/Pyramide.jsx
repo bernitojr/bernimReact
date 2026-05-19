@@ -31,18 +31,15 @@ export default function Pyramide({
                 onMouseLeave={() =>
                   setHovered({ ligne: null, index: null })
                 }
-                onClick={() => {
-                  // animation disparition
-                  setDisappear({ ligne: i, index: b });
+            onClick={() => {
+  setDisappear({ ligne: i, index: b });
 
-                  // jouer le coup après l’animation
-                  setTimeout(() => {
-                    jouerCoup(i, b + 1, tour);
-                    setDisappear({ ligne: null, index: null });
-                  }, 300);
-                }}
-
-                onTouchEnd={() => setHovered({ ligne: null, index: null })}
+  setTimeout(() => {
+    jouerCoup(i, b + 1, tour);
+    setDisappear({ ligne: null, index: null });
+    setHovered({ ligne: null, index: null }); 
+  }, 300);
+}}
               ></span>
                );
           })}
