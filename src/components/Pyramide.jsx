@@ -41,6 +41,8 @@ export default function Pyramide({
                     setDisappear({ ligne: null, index: null });
                   }, 300);
                 }}
+
+                onTouchEnd={() => setHovered({ ligne: null, index: null })}
               ></span>
                );
           })}
